@@ -1,0 +1,19 @@
+<h1><%= @book.id ? "Edit #{@book.title}" : "Add New Book" %></h1>
+<hr />
+<%= form_with(model: @book, local: true) do |f| %>
+  <div>
+    <%= f.label :title %>
+    <%= f.text_field :title, required: true, placeholder: "Title:" %>
+    <br />
+    <br />
+    <%= f.label :author %>
+    <%= f.text_field :author, required: true, placeholder: "Author:" %>
+    <br />
+    <br />
+    <%= f.label :pages %>
+    <%= f.text_field :pages, required: true, placeholder: "Pages:" %>
+    <br />
+    <br />
+  </div>
+    <%= f.submit %>
+<%end%>
