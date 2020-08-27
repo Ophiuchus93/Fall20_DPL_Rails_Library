@@ -1,0 +1,8 @@
+<h1><%= @book.title %> Review</h1>
+<hr>
+<h3>Title: <%= @review.title %></h3>
+<h3>Author: <%= @review.author %></h3>
+<p><%= @review.body %></p>
+<%= link_to "Edit Review", edit_book_review_path(@book, @review) %>
+<%= link_to "Delete Review", book_review_path(@book, @review), method: :delete %>
+<%= link_to "Back", book_reviews_path(@book) %>

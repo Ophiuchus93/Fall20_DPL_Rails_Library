@@ -1,0 +1,17 @@
+<h1><%= @review.id ? "Edit Review" : "Create Review" %></h1>
+<hr>
+<%= form_for [@book, @review] do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title, required: true, autofocus: true, placeholder: "Title:" %>
+<br />
+<br />
+  <%= f.label :author %>
+  <%= f.text_field :author, required: true, placeholder: "Author: " %>
+<br />
+<br />
+  <%= f.label :body %>
+  <%= f.text_area :body, required: true %>
+<br />
+<br />
+  <%= f.submit %>
+<% end %>

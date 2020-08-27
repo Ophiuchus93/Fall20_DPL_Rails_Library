@@ -5,4 +5,5 @@
 <br />
 <%= link_to "Edit Book", edit_book_path %>
 <%= link_to "Delete Book", book_path(@book), method: :delete %>
+<%= link_to "View Reviews", book_reviews_path(@book) %>
 <%= link_to "Back", books_path %>
